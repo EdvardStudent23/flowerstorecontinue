@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/payments")
 public class PaymentController {
-
-    @GetMapping
+    @GetMapping("payment")
     public List<Payment> getPayment() {
-        return List.of(new CreditCardPaymentStrategy());
+        return List.of(new PayPalPaymentStrategy(), new CreditCardPaymentStrategy());
     }
 }

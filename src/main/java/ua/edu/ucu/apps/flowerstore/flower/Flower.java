@@ -7,14 +7,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 @Table
 public class Flower extends Item { 
     @Id
     private long id;
     private double sepalLength;
-    private FlowerColor color;
     private FlowerType type;
     private double price;
     @Getter
@@ -47,9 +47,5 @@ public class Flower extends Item {
             throw new IllegalArgumentException("Sepal length mustn`t be negative");
         }
         this.sepalLength = sepalLength;
-    }
-    
-    public String getColor() {
-        return color.toString();
     }
 }

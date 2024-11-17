@@ -1,7 +1,7 @@
 package ua.edu.ucu.apps.flowerstore.paymant;
-
+import ua.edu.ucu.apps.flowerstore.flower.Item;
 import java.util.List;
 
 public interface Payment {
-    double pay(List<Item> items);
+    public void pay(List<Item> items);
 }
